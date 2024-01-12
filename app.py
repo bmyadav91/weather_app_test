@@ -17,7 +17,7 @@ def weatherapp():
     }
     data = requests.get(url, params)
     datajson = data.json()
-    return datajson
+    return f"{datajson} city: {datajson["city"]}"
 
 
 if __name__ == '__main__':
