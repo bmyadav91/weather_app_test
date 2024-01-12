@@ -16,8 +16,8 @@ def weatherapp():
         'appid' : request.form.get("appid")
     }
     data = requests.get(url, params)
-    city = data["cityt"]
     datajson = data.json()
+    city = datajson["name"]
     return f"{datajson} city: {city}"
 
 
